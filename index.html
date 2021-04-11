@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+      .hidden{
+        display: none;
+      }
+      .pembungkus{
+        position: relative;
+      }
+      #show-nama{
+        position: absolute;
+        top: 41%;
+        left: 35%;
+        right: 35%;
+        color: black;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+        text-transform: capitalize;
+     }
+     #show-deskripsi{
+        position: absolute;
+        top: 53%;
+        left: 20%;
+        right: 20%;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        text-transform: capitalize;
+     }
+     #show-pembicara{
+        position: absolute;
+        right: 16.5%;
+        bottom: 16.5%;
+        color: black;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        text-transform: capitalize;
+     }
+     #show-tanggal{
+        position: absolute;
+        left:20%;
+        bottom: 15%;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+     }
+    </style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h3 class="text-center">E-SERTIFIKAT</h3>
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg">     
+          <div class="info">
+            
+          </div>
+            <div class="form-group">
+              <label >Nama</label>
+              <input type="text" class="form-control" placeholder="Masukkan nama lengkap" id="nama">
+            </div>
+            <div class="form-group">
+              <label >Deskripsi</label>
+              <textarea type="text" class="form-control" placeholder="Mansukkan deskripsi" style="height: 120px" id="deskripsi">
+              </textarea>
+            </div>
+            <div class="form-group">
+              <label >Pembicara</label>
+              <input type="text" class="form-control" placeholder="Masukkan nama pembicara" id="pembicara">
+            </div>
+            <a class="btn btn-success float-right" id="button" href="#gambar">Preview</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h3 class="text-center" id="text">Preview Sertifikat</h3>
+    <div class="container mt-5">
+      <div class="pembungkus">
+        <img src="template/template.jpg" class="img-thumbnail" id="gambar">
+        <p id="show-nama"></p> 
+        <p id="show-deskripsi"></p> 
+        <p id="show-pembicara">a</p> 
+        <p id="show-tanggal"></p> 
+      </div>
+      <br>
+      <div class="row justify-content-center">
+       <a href="#" class="btn btn-primary mb-5">Download Source Code</a>
+      </div>
+      <br>
+      <br>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#button').click(function(){
+            var nama = $('#nama').val();
+            var kelas = $('#kelas').val();
+            var deskripsi = $('#deskripsi').val();
+            var pembicara = $('#pembicara').val();
+              $('#show-nama').text(nama);               
+              $('#show-kelas').text(kelas);                  
+              $('#show-deskripsi').text(deskripsi);                  
+              $('#show-pembicara').text(pembicara);                  
+          });
+      });
+
+    </script>
+    <script>
+            var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth();
+            var year = date.getYear();
+            var tahun = (year < 1000) ? year + 1900 : year;
+            document.getElementById("show-tanggal").innerHTML ="Date: " + day + " " + months[month] + " " + tahun;
+        </script>
+  </body>
+</html>
