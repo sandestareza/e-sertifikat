@@ -54,6 +54,55 @@
         font-weight: bold;
         font-size: 18px;
      }
+     /*web mobile*/
+     @media (max-width: 575.98px) {
+        .hidden{
+          display: none;
+        }
+        .pembungkus{
+          position: relative;
+        }
+        #show-nama{
+          position: absolute;
+          top: 41%;
+          left: 35%;
+          right: 35%;
+          color: black;
+          font-weight: bold;
+          font-size: 16px;
+          text-align: center;
+          text-transform: capitalize;
+       }
+       #show-deskripsi{
+          position: absolute;
+          top: 53%;
+          left: 20%;
+          right: 20%;
+          color: black;
+          font-weight: bold;
+          font-size: 7px;
+          text-align: center;
+          text-transform: capitalize;
+       }
+       #show-pembicara{
+          position: absolute;
+          right: 15%;
+          bottom: 15%;
+          color: black;
+          font-weight: bold;
+          font-size: 10px;
+          text-align: center;
+          text-transform: capitalize;
+       }
+       #show-tanggal{
+          position: absolute;
+          left:15%;
+          bottom: 15%;
+          color: black;
+          font-weight: bold;
+          font-size: 10px;
+       }
+    }
     </style>
 
     <title>Hello, world!</title>
@@ -93,12 +142,12 @@
         <img src="template/template.jpg" class="img-thumbnail" id="gambar">
         <p id="show-nama"></p> 
         <p id="show-deskripsi"></p> 
-        <p id="show-pembicara">a</p> 
+        <p id="show-pembicara"></p> 
         <p id="show-tanggal"></p> 
       </div>
       <br>
       <div class="row justify-content-center">
-       <a href="#" class="btn btn-primary mb-5">Download Source Code</a>
+       <a href="https://github.com/sandesta/e-sertifikat" class="btn btn-primary mb-5">Download Source Code</a>
       </div>
       <br>
       <br>
@@ -111,6 +160,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript">
+      //menampilkan text
       $(document).ready(function(){
         $('#button').click(function(){
             var nama = $('#nama').val();
@@ -126,6 +176,7 @@
 
     </script>
     <script>
+           //menampilkan tanggal hari ini
             var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
             var date = new Date();
             var day = date.getDate();
